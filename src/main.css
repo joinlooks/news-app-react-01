@@ -7,3 +7,11 @@
 	background-color: black;
 	color: white;
 }
+
+.display-none {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
