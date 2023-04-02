@@ -3,6 +3,9 @@
 	grid-template-columns: 0.4fr 0.6fr;
 	margin-bottom: 50px;
 	gap: 10px;
+
+	text-decoration: none;
+	color: inherit;
 }
 
 .left img {
@@ -42,7 +45,7 @@
 	font-size: 1.1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 800px) {
 	.news-item {
 		display: flex;
 		flex-direction: column;

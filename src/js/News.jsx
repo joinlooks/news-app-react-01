@@ -1,14 +1,14 @@
 import "../css/News.css";
 import NewsItem from "./NewsItem";
 
-const News = () => {
+const News = ({ articles }) => {
 	return (
 		<>
 			<div className="news">
-				<NewsItem />
-				<NewsItem />
-				<NewsItem />
-				<NewsItem />
+				{articles &&
+					articles.map((article) => (
+						<NewsItem key={article.id} article={article} />
+					))}
 			</div>
 		</>
 	);

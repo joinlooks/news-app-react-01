@@ -1,33 +1,28 @@
 import "../css/NewsItem.css";
 
-const NewsItem = () => {
+const NewsItem = ({ article }) => {
 	return (
 		<>
-			<div className="news-item">
+			<a
+				className="news-item"
+				href={article.readMoreUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<div className="left">
-					<img
-						src="https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2023/03_mar/28_tue/img_1680015247775_711.jpg?"
-						alt=""
-					/>
+					<img src={article.imageUrl} alt="NewsImage" />
 				</div>
 				<div className="right">
-					<h2 className="title">
-						5 planets visible in the sky tonight in rare celestial event
-					</h2>
+					<h2 className="title">{article.title}</h2>
 					<p className="extras">
-						<span className="author">Daisy Mowke</span>
-						<span className="date-time">08:53 pm 28 Mar 2023,Tuesday</span>
+						<span className="author">{article.author}</span>
+						<span className="date-time">
+							{article.time} {article.date}
+						</span>
 					</p>
-					<p className="content">
-						Five planets, Mercury, Venus, Mars, Jupiter and Uranus, along with
-						the Moon will be visible in almost an arc in the sky on Tuesday
-						night. This isn't a true planetary alignment where they'll appear in
-						a straight line. Jupiter will appear brighter than Mercury and Venus
-						would be the brightest among the whole group. Uranus will appear
-						faintly near Venus.
-					</p>
+					<p className="content">{article.content}</p>
 				</div>
-			</div>
+			</a>
 		</>
 	);
 };

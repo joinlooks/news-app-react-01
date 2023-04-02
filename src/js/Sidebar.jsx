@@ -1,6 +1,11 @@
 import "../css/Sidebar.css";
 
-const Sidebar = ({ sidebar, toggleSidebar }) => {
+const Sidebar = ({ toggleSidebar, setCategory }) => {
+	const handleClick = (e) => {
+		setCategory(e);
+		toggleSidebar();
+	};
+
 	return (
 		<>
 			<div className="close-button">
@@ -9,18 +14,22 @@ const Sidebar = ({ sidebar, toggleSidebar }) => {
 				</button>
 			</div>
 			<div className="sidebar">
-				<p> all </p>
-				<p> national </p>
-				<p> business </p>
-				<p> sports </p>
-				<p> world </p>
-				<p> politics </p>
-				<p> technology </p>
-				<p> startup </p>
-				<p> entertainment </p>
-				<p> miscellaneous </p>
-				<p> science </p>
-				<p> automobile </p>
+				<button onClick={() => handleClick("all")}> All </button>
+				<button onClick={() => handleClick("national")}> National </button>
+				<button onClick={() => handleClick("business")}> Business </button>
+				<button onClick={() => handleClick("sports")}> Sports </button>
+				<button onClick={() => handleClick("world")}> World </button>
+				<button onClick={() => handleClick("politics")}> Politics </button>
+				<button onClick={() => handleClick("technology")}> Technology </button>
+				<button onClick={() => handleClick("startup")}> Startup </button>
+				<button onClick={() => handleClick("entertainment")}>
+					Entertainment
+				</button>
+				<button onClick={() => handleClick("miscellaneous")}>
+					Miscellaneous
+				</button>
+				<button onClick={() => handleClick("science")}> Science </button>
+				<button onClick={() => handleClick("automobile")}> Automobile </button>
 			</div>
 		</>
 	);
