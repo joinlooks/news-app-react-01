@@ -25,9 +25,12 @@ function App() {
 
 	useEffect(() => {
 		document.body.style.backgroundColor = theme === "dark" ? "black" : "white";
+	}, [theme]);
+
+	useEffect(() => {
 		getNews();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [category, theme]);
+	}, [category]);
 
 	return (
 		<>
