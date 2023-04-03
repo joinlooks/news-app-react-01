@@ -1,9 +1,12 @@
 .sidebar-content {
 	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .sidebar {
-	margin-top: 10vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

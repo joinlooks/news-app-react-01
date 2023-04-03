@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import "../css/Sidebar.css";
+import Footer from "./Footer";
 
 const Sidebar = ({ toggleSidebar, setCategory }) => {
 	const handleClick = (e) => {
@@ -40,8 +41,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("all")}
 					>
-						{" "}
-						All{" "}
+						All
 					</button>
 					<button
 						className={
@@ -51,8 +51,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("national")}
 					>
-						{" "}
-						National{" "}
+						National
 					</button>
 					<button
 						className={
@@ -62,8 +61,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("business")}
 					>
-						{" "}
-						Business{" "}
+						Business
 					</button>
 					<button
 						className={
@@ -73,8 +71,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("sports")}
 					>
-						{" "}
-						Sports{" "}
+						Sports
 					</button>
 					<button
 						className={
@@ -84,20 +81,9 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("world")}
 					>
-						{" "}
-						World{" "}
+						World
 					</button>
-					<button
-						className={
-							theme === "dark"
-								? "dark-theme-text-primary"
-								: "light-theme-text-primary"
-						}
-						onClick={() => handleClick("politics")}
-					>
-						{" "}
-						Politics{" "}
-					</button>
+
 					<button
 						className={
 							theme === "dark"
@@ -106,8 +92,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("technology")}
 					>
-						{" "}
-						Technology{" "}
+						Technology
 					</button>
 					<button
 						className={
@@ -117,9 +102,42 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 						}
 						onClick={() => handleClick("startup")}
 					>
-						{" "}
-						Startup{" "}
+						Startup
 					</button>
+
+					<button
+						className={
+							theme === "dark"
+								? "dark-theme-text-primary"
+								: "light-theme-text-primary"
+						}
+						onClick={() => handleClick("science")}
+					>
+						Science
+					</button>
+
+					<button
+						className={
+							theme === "dark"
+								? "dark-theme-text-primary"
+								: "light-theme-text-primary"
+						}
+						onClick={() => handleClick("politics")}
+					>
+						Politics
+					</button>
+
+					<button
+						className={
+							theme === "dark"
+								? "dark-theme-text-primary"
+								: "light-theme-text-primary"
+						}
+						onClick={() => handleClick("automobile")}
+					>
+						Automobile
+					</button>
+
 					<button
 						className={
 							theme === "dark"
@@ -130,6 +148,7 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 					>
 						Entertainment
 					</button>
+
 					<button
 						className={
 							theme === "dark"
@@ -140,29 +159,8 @@ const Sidebar = ({ toggleSidebar, setCategory }) => {
 					>
 						Miscellaneous
 					</button>
-					<button
-						className={
-							theme === "dark"
-								? "dark-theme-text-primary"
-								: "light-theme-text-primary"
-						}
-						onClick={() => handleClick("science")}
-					>
-						{" "}
-						Science{" "}
-					</button>
-					<button
-						className={
-							theme === "dark"
-								? "dark-theme-text-primary"
-								: "light-theme-text-primary"
-						}
-						onClick={() => handleClick("automobile")}
-					>
-						{" "}
-						Automobile{" "}
-					</button>
 				</div>
+				<Footer />
 			</div>
 		</>
 	);

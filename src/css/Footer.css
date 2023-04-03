@@ -1,0 +1,21 @@
+.footer {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-light {
+	background-color: rgb(236, 236, 236);
+}
+
+.footer-dark {
+	background-color: rgb(22, 22, 22);
+}
+
+.footer img {
+	width: 1.8rem;
+	height: 1.8rem;
+}
