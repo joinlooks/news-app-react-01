@@ -24,13 +24,14 @@ function App() {
 	};
 
 	useEffect(() => {
+		document.body.style.backgroundColor = theme === "dark" ? "black" : "white";
 		getNews();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [category]);
+	}, [category, theme]);
 
 	return (
 		<>
-			<div className="app">
+			<div className={`app`}>
 				<div
 					className={`${
 						!sidebar

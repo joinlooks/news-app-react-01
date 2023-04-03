@@ -8,9 +8,7 @@ const NewsItem = ({ article }) => {
 	return (
 		<>
 			<a
-				className={`news-item ${
-					theme === "dark" ? "dark-theme" : "light-theme"
-				}`}
+				className={`news-item ${theme === "dark" ? "card-dark" : "card-light"}`}
 				href={article.readMoreUrl}
 				target="_blank"
 				rel="noopener noreferrer"

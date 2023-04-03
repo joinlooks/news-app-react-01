@@ -7,12 +7,12 @@ const Navbar = ({ toggleSidebar, category }) => {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	};
 
-	const { theme } = useContext(ThemeContext);
+	const { theme, toggleTheme } = useContext(ThemeContext);
 
 	return (
 		<>
 			<nav
-				className={`navbar ${theme === "dark" ? ".dark-theme" : "light-theme"}`}
+				className={`navbar ${theme === "dark" ? "dark-theme" : "light-theme"}`}
 			>
 				<h1
 					className={`heading ${
@@ -21,19 +21,38 @@ const Navbar = ({ toggleSidebar, category }) => {
 							: "light-theme-text-primary"
 					}`}
 				>
-					{capitalizeFirstLetter(category)} News
+					{capitalizeFirstLetter(category)}
 				</h1>
-				<div className="logo">
-					<button onClick={toggleSidebar}>
-						<img
-							src={
-								theme === "dark"
-									? "./images/menu-dark-theme.png"
-									: "./images/menu-light-theme.png"
-							}
-							alt="Menu"
-						/>
-					</button>
+
+				<div className="nav-box">
+					<div className="theme-button">
+						<button
+							onClick={() => {
+								toggleTheme();
+							}}
+						>
+							<img
+								src={
+									theme === "dark"
+										? "./images/change-theme-dark-theme.png"
+										: "./images/change-theme-light-theme.png"
+								}
+								alt="Close"
+							/>
+						</button>
+					</div>
+					<div className="logo">
+						<button onClick={toggleSidebar}>
+							<img
+								src={
+									theme === "dark"
+										? "./images/menu-dark-theme.png"
+										: "./images/menu-light-theme.png"
+								}
+								alt="Menu"
+							/>
+						</button>
+					</div>
 				</div>
 			</nav>
 		</>

@@ -3,9 +3,18 @@
 	grid-template-columns: 0.4fr 0.6fr;
 	margin-bottom: 50px;
 	gap: 10px;
-
+	border-radius: 5px;
+	padding: 5px;
 	text-decoration: none;
 	color: inherit;
+}
+
+.card-dark {
+	background-color: rgb(22, 22, 22);
+}
+
+.card-light {
+	background-color: rgb(236, 236, 236);
 }
 
 .left img {
@@ -36,7 +45,6 @@
 
 .content {
 	font-size: 1.2rem;
-	line-height: 1.4;
 }
 
 @media screen and (width <= 800px) {
