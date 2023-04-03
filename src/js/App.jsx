@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../css/App.css";
 import Navbar from "./Navbar";
 import News from "./News";
 import Sidebar from "./Sidebar";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 function App() {
 	const [sidebar, setSidebar] = useState(false);
 	const [category, setCategory] = useState("all");
 	const [articles, setArticles] = useState([]);
+
+	const { theme } = useContext(ThemeContext);
 
 	const toggleSidebar = () => {
 		setSidebar(!sidebar);
@@ -28,7 +31,13 @@ function App() {
 	return (
 		<>
 			<div className="app">
-				<div className={`${!sidebar ? "display-none" : ""}`}>
+				<div
+					className={`${
+						!sidebar
+							? "display-none"
+							: `${theme === "dark" ? "dark-theme" : "light-theme"}`
+					}`}
+				>
 					<Sidebar
 						sidebar={sidebar}
 						toggleSidebar={toggleSidebar}
@@ -36,7 +45,13 @@ function App() {
 					/>
 				</div>
 
-				<div className={`${sidebar ? "display-none" : ""}`}>
+				<div
+					className={`${
+						sidebar
+							? "display-none"
+							: `${theme === "dark" ? "dark-theme" : "light-theme"}`
+					}`}
+				>
 					<Navbar
 						sidebar={sidebar}
 						toggleSidebar={toggleSidebar}

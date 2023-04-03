@@ -1,0 +1,27 @@
+.dark-theme {
+	background-color: black;
+	color: white;
+}
+.dark-theme-text-primary {
+	color: white;
+}
+.dark-theme-text-secondary {
+	color: #e2e2e2;
+}
+.dark-theme-text-tertiary {
+	color: #ff7a7a;
+}
+
+.light-theme {
+	background-color: white;
+	color: black;
+}
+.light-theme-text-primary {
+	color: black;
+}
+.light-theme-text-secondary {
+	color: #3d3d3d;
+}
+.light-theme-text-tertiary {
+	color: #f55555;
+}

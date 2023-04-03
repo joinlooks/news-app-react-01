@@ -4,8 +4,6 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Source Serif Pro", serif;
-	background-color: black;
-	color: white;
 }
 
 .display-none {
@@ -13,6 +11,8 @@
 }
 
 button {
+	background: transparent;
+	border: none;
 	cursor: pointer;
 }
 
