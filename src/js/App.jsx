@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import News from "./News";
 import Sidebar from "./Sidebar";
 import { ThemeContext } from "../contexts/ThemeContext";
+import Loader from "./Loader";
 
 function App() {
 	const [sidebar, setSidebar] = useState(false);
@@ -28,6 +29,7 @@ function App() {
 	}, [theme]);
 
 	useEffect(() => {
+		setArticles([]);
 		getNews();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [category]);
@@ -62,7 +64,7 @@ function App() {
 						category={category}
 					/>
 
-					<News articles={articles} />
+					{articles.length === 0 ? <Loader /> : <News articles={articles} />}
 				</div>
 			</div>
 		</>
