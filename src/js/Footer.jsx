@@ -12,17 +12,30 @@ const Footer = () => {
 					theme === "dark" ? "footer-dark" : "footer-light"
 				}`}
 			>
-				<p>Made with ❤️ by Lakshya Sharma</p>
-				<a href="https://github.com/joinlooks" target="_blank" rel="noreferrer">
-					<img
-						src={
-							theme === "dark"
-								? "./images/github-dark-theme.png"
-								: "./images/github-light-theme.png"
-						}
-						alt="Github"
-					/>
-				</a>
+				<p>Made with ❤️ by -</p>
+				<p className="author-names">
+					<a
+						href="https://github.com/joinlooks"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Lakshya Sharma
+					</a>
+					<a
+						href="https://github.com/mayankkumrawat"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Mayank Kumrawat
+					</a>
+					<a
+						href="https://github.com/dhruvsinghal028"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Dhruv Singhal
+					</a>
+				</p>
 			</div>
 		</>
 	);

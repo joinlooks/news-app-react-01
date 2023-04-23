@@ -19,3 +19,15 @@
 	width: 1.8rem;
 	height: 1.8rem;
 }
+
+.author-names {
+	display: flex;
+	gap: 0.5rem;
+}
+
+@media screen and (width <= 800px) {
+	.author-names {
+		flex-direction: column;
+		gap: 0px;
+	}
+}
