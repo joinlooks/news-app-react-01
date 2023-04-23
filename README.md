@@ -8,6 +8,7 @@ Visit here: [react-news-app](https://joinlooks.github.io/news-app-react-01/)
 
 ```
 $ git clone https://github.com/joinlooks/news-app-react-01.git
+$ cd cd news-app-react-01/
 $ yarn
 $ yarn dev
 ```
