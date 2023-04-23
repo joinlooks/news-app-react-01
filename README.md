@@ -8,14 +8,14 @@ To run on your local machine
 - Using [yarn](https://yarnpkg.com/)  
 ```shell
 $ git clone https://github.com/joinlooks/news-app-react-01.git
-$ cd cd news-app-react-01/
+$ cd news-app-react-01/
 $ yarn
 $ yarn dev
 ```
 - Using [npm](https://www.npmjs.com/)  
 ```shell
 $ git clone https://github.com/joinlooks/news-app-react-01.git
-$ cd cd news-app-react-01/
+$ cd news-app-react-01/
 $ npm install
 $ npm run dev
 ```
