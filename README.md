@@ -30,3 +30,7 @@ Then visit this -
 [Lakshya Sharma](https://github.com/joinlooks)  
 [Mayank Kumrawat](https://github.com/mayankkumrawat)  
 [Dhruv Singhal](https://github.com/dhruvsinghal028)
+
+## Guided by
+Dr. Lalit Purohit sir   
+Mr. Upendra Singh sir
