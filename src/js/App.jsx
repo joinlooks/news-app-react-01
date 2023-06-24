@@ -18,7 +18,7 @@ function App() {
 	};
 
 	const getNews = async () => {
-		const URL = `https://inshorts.deta.dev/news?category=${category}`;
+		const URL = `https://inshorts-news.vercel.app/${category}`;
 		const response = await fetch(URL);
 		const data = await response.json();
 		setArticles(data.data);
